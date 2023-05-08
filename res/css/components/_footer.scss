@@ -1,0 +1,19 @@
+.footer {
+	padding: 2rem;
+	.footer-line {
+		display: block;
+		height: 2px;
+		background-color: $white;
+		margin-bottom: 1rem;
+	}
+	.footer-content {
+		@include flexbox(center, 0, column, 0);
+		&__text {
+			@include flexbox(center, 0, 0, 0.5rem);
+			.footer-text {
+				font-size: clamp(0.85rem, 1vw, 1.5rem);
+				font-weight: bold;
+			}
+		}
+	}
+}

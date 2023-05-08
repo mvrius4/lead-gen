@@ -1,0 +1,39 @@
+.process {
+	text-align: center;
+	margin: 2rem;
+	.process-steps {
+		margin-top: 2.5rem;
+		@include flexbox(center, 0, column, 2.5rem);
+		&__step {
+			position: relative;
+			width: 300px;
+			background-color: $desBlack;
+			overflow: hidden;
+			border-radius: 1.5rem;
+			padding: 1rem;
+			@include flexbox(0, center, column, 0);
+			h4 {
+				margin-top: 4rem;
+			}
+		}
+		&__nr {
+			position: absolute;
+			top: -2.45rem;
+			left: -0.65rem;
+			font-size: clamp(10rem, 15vw, 20rem);
+			font-weight: bold;
+			color: rgba(220, 220, 220, 0.025);
+		}
+	}
+	@media (min-width: $lg) {
+		.process-steps {
+			@include flexbox(flex-start, center, row, 2.5rem);
+			&__step:nth-child(even) {
+				margin-top: 3rem;
+			}
+			h4 {
+				font-size: clamp(1.25rem, 2.25vw, 3.75rem);
+			}
+		}
+	}
+}

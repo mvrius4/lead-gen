@@ -1,0 +1,174 @@
+@font-face {
+	font-family: 'Poppins';
+	src: url('../../assets/font/Poppins-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../../assets/font/Poppins-Bold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html {
+	width: 100%;
+}
+
+body {
+	font-family: 'Poppins';
+	background-color: $black;
+	color: $white;
+	line-height: 1.2;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	li,
+	span {
+		&::selection {
+			background: $primaryColor;
+			color: $white;
+		}
+	}
+}
+main,
+section {
+	padding: 2rem;
+}
+
+h1 {
+	font-size: clamp(2rem, 3.25vw, 5rem);
+	font-weight: bold;
+}
+h2,
+.hero-title {
+	font-size: clamp(3.25rem, 6.5vw, 8rem);
+	font-weight: bold;
+}
+h3 {
+	font-size: clamp(2.5rem, 3.25vw, 5rem);
+	font-weight: bold;
+}
+h4 {
+	font-size: clamp(1.85rem, 2.25vw, 3.75rem);
+	font-weight: bold;
+}
+h5 {
+	font-size: clamp(1.35rem, 1.75vw, 2.5rem);
+	font-weight: bold;
+}
+li {
+	font-size: clamp(1.5rem, 2vw, 3rem);
+	font-weight: bold;
+}
+p {
+	font-size: clamp(1rem, 1.25vw, 1.5rem);
+	font-weight: normal;
+}
+a {
+	color: $white;
+	text-decoration: none;
+	transition: color 0.25s ease-in-out;
+	cursor: pointer;
+	&:hover {
+		color: $primaryColor;
+	}
+}
+li {
+	list-style: none;
+}
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: $primaryColor;
+	color: $white;
+	font-size: clamp(0.8rem, 1vw, 1.25rem);
+	font-weight: bold;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.4rem;
+	align-self: flex-start;
+	transition: all 0.25s ease-in-out;
+	&:hover,
+	&:focus {
+		background-color: $hoverColor;
+	}
+}
+
+input {
+	background-color: $white;
+	outline: none;
+	padding: 0.35rem;
+	border: 2px solid $white;
+	transition: border 0.25s ease-in-out;
+	&:hover,
+	&:focus {
+		border: 2px solid $primaryColor;
+	}
+	&::placeholder {
+		color: $black;
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+}
+svg {
+	cursor: pointer;
+	width: 30px;
+	path {
+		transition: fill 0.25s ease-in-out;
+		fill: $white;
+	}
+	&:hover,
+	&:focus {
+		path {
+			fill: $primaryColor;
+		}
+	}
+}
+.bold {
+	font-weight: bold;
+}
+.blue {
+	color: $primaryColor;
+}
+.text-xl {
+	font-size: clamp(6.5rem, 8.5vw, 12rem);
+	font-weight: bold;
+}
+.line {
+	width: 1.75rem;
+	padding: 1px;
+	background-color: $primaryColor;
+	border-radius: 1rem;
+}
+
+@media (min-width: $md) {
+	button {
+		padding: 0.65rem 1.15rem;
+	}
+}
+.hidden {
+	display: none;
+}
+
+.circle {
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: $primaryColor;
+	border-radius: 100%;
+}

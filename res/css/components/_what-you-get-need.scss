@@ -1,0 +1,21 @@
+.what-you-get-need {
+	overflow-x: hidden;
+	@include flexbox(center, 0, column, 0);
+	&__features,
+	&__reqs {
+		margin-top: 1rem;
+		@include flexbox(0, 0, column, 0.5rem);
+		&__feature,
+		&__req {
+			@include flexbox(center, 0, 0, 0.25rem);
+		}
+	}
+	&__results {
+		width: 500px;
+		height: 500px;
+	}
+	@media (min-width: $lg) {
+		margin-top: -8.5rem;
+		@include flexbox(center, space-around, row, 0);
+	}
+}

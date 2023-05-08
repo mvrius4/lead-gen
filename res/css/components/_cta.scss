@@ -1,0 +1,9 @@
+.cta {
+	background-color: $desBlack;
+	text-align: center;
+	padding: 1rem;
+	margin: 2.5rem;
+	margin-top: 5rem;
+	border-radius: 1.5rem;
+	@include flexbox(center, 0, column, 1.5rem);
+}

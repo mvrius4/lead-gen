@@ -1,0 +1,20 @@
+main {
+	height: 100%;
+	overflow-x: hidden;
+	@include flexbox(center, 0, column, 0);
+	.left {
+		button {
+			margin-top: 2.5rem;
+		}
+	}
+	.right {
+		img {
+			width: 400px;
+			height: 400px;
+		}
+	}
+	@media (min-width: $md) {
+		height: 90vh;
+		@include flexbox(0, space-between, row, 0);
+	}
+}
