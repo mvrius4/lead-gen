@@ -1,5 +1,6 @@
 .footer {
-	padding: 2rem;
+	padding: 1rem;
+	margin-top: 4rem;
 	.footer-line {
 		display: block;
 		height: 2px;
@@ -7,13 +8,18 @@
 		margin-bottom: 1rem;
 	}
 	.footer-content {
-		@include flexbox(center, 0, column, 0);
+		@include flexbox(center, 0, column, 1rem);
 		&__text {
 			@include flexbox(center, 0, 0, 0.5rem);
 			.footer-text {
-				font-size: clamp(0.85rem, 1vw, 1.5rem);
+				font-size: clamp(0.65rem, 1.05vw, 1.5rem);
 				font-weight: bold;
 			}
+		}
+	}
+	@media (min-width: $md) {
+		.footer-content {
+			@include flexbox(center, space-between, row, 0);
 		}
 	}
 }

@@ -14,7 +14,7 @@ main {
 		}
 	}
 	@media (min-width: $md) {
-		height: 90vh;
+		height: 80vh;
 		@include flexbox(0, space-between, row, 0);
 	}
 }

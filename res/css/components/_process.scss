@@ -1,6 +1,7 @@
 .process {
 	text-align: center;
 	margin: 2rem;
+	margin-top: 3rem;
 	.process-steps {
 		margin-top: 2.5rem;
 		@include flexbox(center, 0, column, 2.5rem);
@@ -18,8 +19,8 @@
 		}
 		&__nr {
 			position: absolute;
-			top: -2.45rem;
-			left: -0.65rem;
+			top: -4rem;
+			left: -1rem;
 			font-size: clamp(10rem, 15vw, 20rem);
 			font-weight: bold;
 			color: rgba(220, 220, 220, 0.025);

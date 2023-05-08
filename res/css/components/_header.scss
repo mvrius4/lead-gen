@@ -14,16 +14,18 @@ header {
 		}
 	}
 	nav {
+		height: 150px;
 		display: none;
 		margin-top: 0.5rem;
 		&.active {
-			display: block;
+			@include flexbox(center, center, 0, 0);
 		}
 		ul {
 			@include flexbox(center, center, column, 1rem);
 		}
 	}
 	@media (min-width: $md) {
+		position: static;
 		@include flexbox(0, space-between, 0, 0);
 		.upper-navigation {
 			svg {
@@ -31,6 +33,7 @@ header {
 			}
 		}
 		nav {
+			height: auto;
 			@include flexbox(0, 0, 0, 0);
 			ul {
 				@include flexbox(0, 0, row, 2rem);
